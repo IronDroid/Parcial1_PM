@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parcial1 PM</title>
+    {% block header %}{% endblock %}
+</head>
+
+<body>
+    {% for message in get_flashed_messages() %}
+        <div class="flash">{{ message }}</div>
+    {% endfor %}
+    
+    {% block content %}{% endblock %}
+</body>
+</html>

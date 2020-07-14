@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>Jhonny Cruz</h3>
+<img src="static/logo1.png" style="background-color: {{ colorbg }};">
+
+<div>Colores</div>
+<form class="form-inline" method="POST" action="{{ url_for('index') }}">
+  <div class="form-group">
+    <div class="input-group">
+            <select name="comp_select" class="selectpicker form-control">
+              {% for obj in data %}
+              <option value="{{ obj.id }}">{{ obj.name }}</option>
+              {% endfor %}
+            </select>
+    </div>
+    <button type="submit" class="btn btn-default">Go</button>
+  </div>
+</form>
+{% endblock %}
